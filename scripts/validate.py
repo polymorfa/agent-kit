@@ -13,5 +13,9 @@ for filename, transport in [("mcp.json", "streamable-http"), (".mcp.json", "http
     assert servers == {"polymorfa-docs": {"type": transport, "url": "https://docs.polymorfa.com/mcp"}}, filename
 for filename in (".claude-plugin/plugin.json", ".cursor-plugin/plugin.json"):
     manifest = json.loads((root / filename).read_text())
-    assert (root / manifest["mcpServers"]).is_file(), filename
-    assert (root / manifest["skills"]).is_dir(), filename
+    for field, kind in (("mcpServers", "file"), ("skills", "directory")):
+        relative = Path(manifest[field])
+        assert not relative.is_absolute() and ".." not in relative.parts, (filename, field)
+        target = (root / relative).resolve()
+        assert target.is_relative_to(root), (filename, field)
+        assert target.is_file() if kind == "file" else target.is_dir(), (filename, field)
