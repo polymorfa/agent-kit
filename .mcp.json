@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "polymorfa-docs": {
+      "type": "http",
+      "url": "https://docs.polymorfa.com/mcp"
+    }
+  }
+}

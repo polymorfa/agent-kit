@@ -1,0 +1,10 @@
+{
+  "name": "polymorfa",
+  "version": "0.1.0",
+  "mcpServers": {
+    "polymorfa-docs": {
+      "httpUrl": "https://docs.polymorfa.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "polymorfa",
+  "version": "0.1.0",
+  "description": "Set up Polymorfa integrations using maintained documentation.",
+  "author": {
+    "name": "Polymorfa"
+  },
+  "homepage": "https://docs.polymorfa.com",
+  "repository": "https://github.com/polymorfa/agent-kit",
+  "license": "MIT",
+  "keywords": [
+    "polymorfa",
+    "whatsapp",
+    "mcp"
+  ]
+}
