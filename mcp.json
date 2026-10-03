@@ -3,7 +3,7 @@
   "mcpServers": {
     "polymorfa-docs": {
       "url": "https://docs.polymorfa.com/mcp",
-      "type": "http"
+      "type": "streamable-http"
     }
   }
 }
