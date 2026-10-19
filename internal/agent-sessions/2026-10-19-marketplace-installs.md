@@ -47,3 +47,19 @@ Generated `dist/well-known-skills/` is ignored. The docs build must run the scri
 Gemini and Cursor executables were absent. Their native installs were not tested. The existing extension/plugin files and all skill contents remain unchanged. API, SDK, CLI product behavior, Admin, authentication, billing, and customer data are unaffected by these packaging changes. No workflow files were changed or re-enabled.
 
 A useful optional engineering article would compare manifest validation with real isolated installs, using the Claude component inventory and HTTP skill-byte checks as evidence. It would keep unmerged and undeployed availability explicit.
+
+## Remote install checkpoint
+
+At pushed implementation revision `0bd7c800185c5c63d241dab3d001d5fb3fe1e369`, both Git-backed installs also passed in separate task configurations:
+
+```sh
+CLAUDE_CONFIG_DIR=<task>/claude-git-config claude plugin marketplace add 'https://github.com/polymorfa/agent-kit.git#feat/marketplace-installs'
+CLAUDE_CONFIG_DIR=<task>/claude-git-config claude plugin install polymorfa@polymorfa
+CLAUDE_CONFIG_DIR=<task>/claude-git-config claude plugin details polymorfa
+CODEX_HOME=<task>/codex-git-config codex plugin marketplace add polymorfa/agent-kit --ref feat/marketplace-installs --json
+CODEX_HOME=<task>/codex-git-config codex plugin add polymorfa@polymorfa --json
+```
+
+Claude cloned the selected branch and reported two skills and the documentation MCP server. Codex fetched the branch, installed version 0.1.0, and its cache contained the root portable manifest, MCP configuration, and both skill files. Remote and local branch heads matched that SHA.
+
+The skills-only Git path also passed from a second throwaway project: `npx --yes skills add https://github.com/polymorfa/agent-kit --agent cursor --skill '*' --yes --copy` installed both skills. This checks the skills installer with Cursor selected, not the native Cursor runtime.
