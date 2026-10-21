@@ -1,5 +1,9 @@
 import json
 from pathlib import Path
+from build_skills_index import build, validate_index
+
+# Replace ignored build artifacts before the repository-wide JSON scan.
+build()
 root = Path(__file__).resolve().parents[1]
 for path in root.rglob("*.json"):
     json.loads(path.read_text())
@@ -19,3 +23,25 @@ for filename in (".claude-plugin/plugin.json", ".cursor-plugin/plugin.json"):
         target = (root / relative).resolve()
         assert target.is_relative_to(root), (filename, field)
         assert target.is_file() if kind == "file" else target.is_dir(), (filename, field)
+
+# Each client has its own catalog format. Both resolve the plugin from repo root.
+claude_marketplace = json.loads((root / ".claude-plugin/marketplace.json").read_text())
+assert claude_marketplace["name"] == "polymorfa"
+assert claude_marketplace["owner"] == {"name": "Polymorfa"}
+assert len(claude_marketplace["plugins"]) == 1
+assert claude_marketplace["plugins"][0]["name"] == "polymorfa"
+assert claude_marketplace["plugins"][0]["source"] == "./"
+codex_marketplace = json.loads((root / ".agents/plugins/marketplace.json").read_text())
+assert codex_marketplace == {
+    "name": "polymorfa",
+    "interface": {"displayName": "Polymorfa"},
+    "plugins": [{
+        "name": "polymorfa",
+        "source": {"source": "local", "path": "./"},
+        "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+        "category": "Developer Tools",
+    }],
+}
+
+validate_index()
+print("Claude and Codex marketplaces and generated skills index validated")

@@ -1,0 +1,14 @@
+{
+  "name": "polymorfa",
+  "owner": {
+    "name": "Polymorfa"
+  },
+  "plugins": [
+    {
+      "name": "polymorfa",
+      "source": "./",
+      "description": "Set up Polymorfa integrations using maintained documentation."
+    }
+  ],
+  "description": "Skills and documentation tools for Polymorfa integrations."
+}
