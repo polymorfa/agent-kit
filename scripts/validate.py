@@ -1,5 +1,9 @@
 import json
 from pathlib import Path
+from build_skills_index import build, validate_index
+
+# Replace ignored build artifacts before the repository-wide JSON scan.
+build()
 root = Path(__file__).resolve().parents[1]
 for path in root.rglob("*.json"):
     json.loads(path.read_text())
@@ -39,8 +43,5 @@ assert codex_marketplace == {
     }],
 }
 
-from build_skills_index import build, validate_index
-
-build()
 validate_index()
 print("Claude and Codex marketplaces and generated skills index validated")

@@ -20,7 +20,13 @@ def skill_entries(skills_dir):
         # This repository uses plain, single-line YAML metadata. Fail rather than
         # silently misreading quoted or multiline YAML when that convention changes.
         match = re.match(r"\A---\nname: ([a-z0-9-]+)\ndescription: ([^\n]+)\n---\n", text)
-        if not match or match[1] != directory.name or match[2][0] in "'\"|>{[&*!":
+        if (
+            not match
+            or match[1] != directory.name
+            or match[2] != match[2].strip()
+            or match[2][0] in "-?:,[]{}#&*!|>'\"%@`"
+            or re.search(r"\s#|:(?:\s|$)", match[2])
+        ):
             raise ValueError(f"Expected plain name and single-line description: {directory}")
         files = []
         for path in sorted(directory.rglob("*")):
@@ -38,6 +44,13 @@ def build(skills_dir=ROOT / "skills", output=OUTPUT):
     entries = skill_entries(skills_dir)
     if output.is_symlink() or output.parent.is_symlink():
         raise ValueError(f"Output must not be a symlink: {output}")
+    resolved_output = output.resolve()
+    resolved_skills = skills_dir.resolve()
+    if (
+        resolved_output.is_relative_to(resolved_skills)
+        or resolved_skills.is_relative_to(resolved_output)
+    ):
+        raise ValueError(f"Output must not overlap the skills directory: {output}")
     if output.exists():
         shutil.rmtree(output)
     output.mkdir(parents=True)
