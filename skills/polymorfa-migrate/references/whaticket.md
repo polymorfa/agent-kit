@@ -73,4 +73,4 @@ Resolve, snooze, transfer, assign, queues (departments), Kanban stages, internal
 
 ## AI agents
 
-Whaticket offers an MCP server through its connected apps tab. Polymorfa has a hosted MCP server with 150+ tools (`development/mcp`).
+Whaticket offers an MCP server through its connected apps tab. Polymorfa has a hosted MCP server with 200+ tools (`development/mcp`).

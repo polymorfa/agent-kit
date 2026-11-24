@@ -39,7 +39,7 @@ Polymorfa: `Authorization: Bearer <project token or team key>` with scopes such 
 | Call campaigns that dial a list and play a recorded audio (`/v2/campaigns`) | Not offered. Polymorfa cannot play an audio file on a call yet; use your own server code with `CallsClient` to speak and listen | gap | `calls/server` |
 | Server-sent event streams for the dashboard (`/v2/devices/events`) | Webhooks for server code. Event streams are a beta that needs team access | different | `development/webhooks`, `development/event-streams` |
 | Device and subscription purchase (`/v2/sales`) | Not offered. Each Connection is billed for its online days from credits | gap | `billing/usage` |
-| Hosted MCP server | Hosted MCP server with 150+ tools, and a local MCP in the CLI | more | `development/mcp` |
+| Hosted MCP server | Hosted MCP server with 200+ tools, and a local MCP in the CLI | more | `development/mcp` |
 
 ## Webhooks
 

@@ -40,7 +40,7 @@ Ask who owns each WhatsApp Business Account before planning the move. A number r
 | Direct Send (`category: "utility"` on `/messages`) | Not verified on the Graph API | not verified | `api/graph/index` |
 | Payments APIs (Brazil, India, Singapore) | Not verified | not verified | none |
 | Local storage (data residency region per number) | Not verified | not verified | none |
-| MCP server for the 360dialog account | Hosted MCP server with 150+ tools, and a local MCP in the CLI | more | `development/mcp` |
+| MCP server for the 360dialog account | Hosted MCP server with 200+ tools, and a local MCP in the CLI | more | `development/mcp` |
 | Sandbox | Test connections on a simulated network, at 0 credits | more | `testing/index` |
 
 ## Calls

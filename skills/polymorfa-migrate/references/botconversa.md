@@ -70,7 +70,7 @@ All sends are `POST /messaging/{connection}/messages/send` with `{conversation, 
 | Incoming webhook (Automação, Webhooks): another tool calls BotConversa to create or update a contact | The customer's system calls the REST API directly. Team request quota returns `429` with `Retry-After` | different | `api/rate-limits` |
 | Integration block: an HTTP call from inside a flow to the customer's server. One call per block, no error path, 10-second wait for the response mapping | A signed webhook for the events picked, up to 8 attempts over 24 hours, delivery log and replay | more | `development/webhooks` |
 | Reading a message through the API | Not possible on BotConversa. On Polymorfa every inbound message is `message.received` | more | `messaging/receive` |
-| GPT assistant, AI skills and MCP tools inside the app | The customer's own agent over the hosted MCP server (150+ tools) | different | `development/mcp` |
+| GPT assistant, AI skills and MCP tools inside the app | The customer's own agent over the hosted MCP server (200+ tools) | different | `development/mcp` |
 | Kanban board, built-in CRM | Not offered | gap | none |
 
 ## 2. Auth and identifiers

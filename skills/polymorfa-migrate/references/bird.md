@@ -44,7 +44,7 @@ Ask the user who owns each WhatsApp Business Account before planning the move. B
 | Preferences (all or non-transactional) and keyword rules | Not offered | gap | none |
 | Statistics by country, template, category, error code, tag, number | Not offered. Connection analytics cover engagement for linked-device Connections | gap | `connections/analytics` |
 | Send API rate limits by plan | `429` with `Retry-After`; respect it | same | `api/rate-limits` |
-| Hosted MCP server (curated tools) | Hosted MCP server with 150+ tools, and a local MCP in the CLI | more | `development/mcp` |
+| Hosted MCP server (curated tools) | Hosted MCP server with 200+ tools, and a local MCP in the CLI | more | `development/mcp` |
 | CLI with `bird webhooks` | Polymorfa CLI with a command for every resource and webhook events forwarded to localhost | more | `development/cli` |
 
 ## Calls

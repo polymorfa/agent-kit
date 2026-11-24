@@ -47,7 +47,7 @@ Ask the user who owns each WhatsApp Business Account before planning the move, a
 | Roles and teams in the inbox | Team roles, scoped keys and audit history | different | `development/api-keys` |
 | Reports and insights | Not offered as inbox reports. Connection analytics cover engagement for linked-device Connections | gap | `connections/analytics` |
 | Message history in the inbox | Message history, a beta that needs enrollment | different | `messaging/history` |
-| Hosted MCP server | Hosted MCP server with 150+ tools, and a local MCP in the CLI | more | `development/mcp` |
+| Hosted MCP server | Hosted MCP server with 200+ tools, and a local MCP in the CLI | more | `development/mcp` |
 
 ## Webhooks
 

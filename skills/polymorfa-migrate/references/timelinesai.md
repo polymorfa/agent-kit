@@ -66,7 +66,7 @@ All sends are `POST /messaging/{connection}/messages/send` with `{conversation, 
 
 | TimelinesAI | Polymorfa | Status | Docs page |
 | --- | --- | --- | --- |
-| WhatsApp MCP (list chats, read history, send replies, set labels, assign teammates, check quotas) | Hosted MCP server with 150+ tools, and a local MCP server in the CLI | more | `development/mcp` |
+| WhatsApp MCP (list chats, read history, send replies, set labels, assign teammates, check quotas) | Hosted MCP server with 200+ tools, and a local MCP server in the CLI | more | `development/mcp` |
 
 ### 1.6 Partner API (multi-tenant)
 

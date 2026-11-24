@@ -99,7 +99,7 @@ Group ids are opaque decimals, not `...@g.us`.
 
 | Green API capability | Polymorfa equivalent | Status | Docs page |
 | --- | --- | --- | --- |
-| Hosted MCP server at `mcp.green-api.com`, OAuth with the instance id and token | `https://api.polymorfa.com/mcp`, Streamable HTTP, Bearer credential (team key, project token with the `mcp` scope, or client token with the `mcp` action). 150+ tools. It cannot return QR or pairing codes; use QuickLink. | more | `development/mcp` |
+| Hosted MCP server at `mcp.green-api.com`, OAuth with the instance id and token | `https://api.polymorfa.com/mcp`, Streamable HTTP, Bearer credential (team key, project token with the `mcp` scope, or client token with the `mcp` action). 200+ tools. It cannot return QR or pairing codes; use QuickLink. | more | `development/mcp` |
 | Libraries in Python, Go, Java, PHP, Node.js, HTML5, 1C, C++ and gRPC | OpenAPI 3.1 specs for the Messaging, Platform and Graph APIs, and `@polymorfa/sdk` for TypeScript (prerelease under the `dev` tag). Generate a client from the specs for other languages. | different | `get-started/development-environment` |
 | Integrations (Make, n8n, Zapier and others) | Call the REST API from the platform's HTTP step, or connect through MCP. | different | `integrations/overview` |
 | Meta-format webhooks and Graph API | `format:"meta"` webhooks and `/graph/whatsapp/{version}/...` | more | `api/graph/index` |

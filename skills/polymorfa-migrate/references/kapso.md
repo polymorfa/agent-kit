@@ -42,7 +42,7 @@ Ask how each Kapso number was connected and who owns each WhatsApp Business Acco
 | Call logs | Call history with quality stats | same | `calls/records` |
 | Call recordings and transcripts | Polymorfa does not record calls | gap | none |
 | Phone number health check | BanSafe Health score on production linked-device connections | different | `safety/health` |
-| MCP server (47 tools) | Hosted MCP server with 150+ tools, and a local MCP in the CLI | more | `development/mcp` |
+| MCP server (47 tools) | Hosted MCP server with 200+ tools, and a local MCP in the CLI | more | `development/mcp` |
 | CLI `@kapso/cli`, TypeScript SDK | Polymorfa CLI and SDKs | more | `development/cli` |
 | n8n node | n8n, Zapier and Make integrations | more | `integrations/overview` |
 | Sandbox number (text and interactive only) | Test connections on a simulated network, at 0 credits | more | `testing/index` |
