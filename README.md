@@ -86,7 +86,7 @@ The builder writes `dist/well-known-skills/index.json` and `<skill-name>/<file>`
 }
 ```
 
-The real index includes both bundled skills. Files are fetched relative to `/.well-known/skills/<name>/`, for example `/.well-known/skills/polymorfa/SKILL.md`.
+The real index includes every bundled skill: `polymorfa`, `polymorfa-webhooks` and `polymorfa-migrate`, which moves an integration from another provider such as Z-API. Files are fetched relative to `/.well-known/skills/<name>/`, for example `/.well-known/skills/polymorfa/SKILL.md`.
 
 Generated output is ignored by Git. The docs build should use a pinned agent-kit revision, run the builder, and copy the contents of `dist/well-known-skills/` to the site's `public/.well-known/skills/` directory (or equivalent static root). Serve the index as JSON and the skill files as their original bytes without authentication or HTML fallbacks. This keeps `skills/` as the source and avoids stale committed copies. Docs integration and deployment are outside this repository change.
 
