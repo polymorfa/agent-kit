@@ -5,7 +5,7 @@ description: Move an existing WhatsApp integration from another provider (such a
 
 # Move a WhatsApp integration to Polymorfa
 
-Use this skill when a project already sends or receives WhatsApp messages through another provider and the user wants some or all of it on Polymorfa. Read the provider's reference in `references/` before planning. References: `references/z-api.md` (Z-API). If the provider has no reference, follow its [migration guide](https://docs.polymorfa.com/migrate/z-api) pattern, the [agent index](https://docs.polymorfa.com/llms.txt) and the provider's own documentation, and say that no reference exists.
+Use this skill when a project already sends or receives WhatsApp messages through another provider and the user wants some or all of it on Polymorfa. Read the provider's reference in `references/` before planning. References, one per provider: `references/z-api.md` (Z-API), `references/1msg.md` (1MSG), `references/green-api.md` (Green API), `references/timelinesai.md` (TimelinesAI), `references/botconversa.md` (BotConversa), `references/whaticket.md` (Whaticket), `references/zapligue.md` (ZapLigue). If the provider has no reference, follow the matching migration guide under https://docs.polymorfa.com/migrate/, the [agent index](https://docs.polymorfa.com/llms.txt) and the provider's own documentation, and say that no reference exists.
 
 ## 1. Inventory before you change anything
 
